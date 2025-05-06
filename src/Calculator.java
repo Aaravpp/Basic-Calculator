@@ -1,7 +1,10 @@
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 
-public class Calculator {
+public class Calculator implements ActionListener{
 	
 	JFrame jf;
 	JLabel displayLabel;
@@ -30,12 +33,14 @@ public class Calculator {
 		
 		sevenButton = new JButton("7");
 		sevenButton.setBounds(20, 150, 70, 70);
+		sevenButton.addActionListener(this);
 		sevenButton.setFont(new Font("Arial", Font.BOLD, 25));
 		
 		jf.add(sevenButton);
 		
 		eightButton = new JButton("8");
 		eightButton.setBounds(120, 150, 70, 70);
+		eightButton.addActionListener(this);
 		eightButton.setFont(new Font("Arial", Font.BOLD, 25));
 
 		
@@ -43,6 +48,7 @@ public class Calculator {
 		
 		nineButton = new JButton("9");
 		nineButton.setBounds(220, 150, 70, 70);
+		nineButton.addActionListener(this);
 		nineButton.setFont(new Font("Arial", Font.BOLD, 25));
 
 		
@@ -50,6 +56,7 @@ public class Calculator {
 		
 		fourButton = new JButton("4");
 		fourButton.setBounds(20, 245, 70, 70);
+		fourButton.addActionListener(this);
 		fourButton.setFont(new Font("Arial", Font.BOLD, 25));
 
 		
@@ -57,6 +64,7 @@ public class Calculator {
 		
 		fiveButton = new JButton("5");
 		fiveButton.setBounds(120, 245, 70, 70);
+		fiveButton.addActionListener(this);
 		fiveButton.setFont(new Font("Arial", Font.BOLD, 25));
 
 		
@@ -64,6 +72,7 @@ public class Calculator {
 		
 		sixButton = new JButton("6");
 		sixButton.setBounds(220, 245, 70, 70);
+		sixButton.addActionListener(this);
 		sixButton.setFont(new Font("Arial", Font.BOLD, 25));
 
 		
@@ -71,6 +80,7 @@ public class Calculator {
 		
 		oneButton = new JButton("1");
 		oneButton.setBounds(20, 345, 70, 70);
+		oneButton.addActionListener(this);
 		oneButton.setFont(new Font("Arial", Font.BOLD, 25));
 
 		
@@ -78,6 +88,7 @@ public class Calculator {
 		
 		twoButton = new JButton("2");
 		twoButton.setBounds(120, 345, 70, 70);
+		twoButton.addActionListener(this);
 		twoButton.setFont(new Font("Arial", Font.BOLD, 25));
 
 		
@@ -85,6 +96,7 @@ public class Calculator {
 		
 		threeButton = new JButton("3");
 		threeButton.setBounds(220, 345, 70, 70);
+		threeButton.addActionListener(this);
 		threeButton.setFont(new Font("Arial", Font.BOLD, 25));
 
 		
@@ -92,6 +104,7 @@ public class Calculator {
 		
 		dotButton = new JButton(".");
 		dotButton.setBounds(20, 445, 70, 70);
+		dotButton.addActionListener(this);
 		dotButton.setFont(new Font("Arial", Font.BOLD, 25));
 
 		
@@ -99,6 +112,7 @@ public class Calculator {
 		
 		zeroButton = new JButton("0");
 		zeroButton.setBounds(120, 445, 70, 70);
+		zeroButton.addActionListener(this);
 		zeroButton.setFont(new Font("Arial", Font.BOLD, 25));
 
 		
@@ -147,6 +161,12 @@ public class Calculator {
 	public static void main(String[] args) {
 		
 		new Calculator();
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
 		
 	}
 
