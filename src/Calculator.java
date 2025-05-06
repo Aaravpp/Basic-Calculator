@@ -1,11 +1,11 @@
-import java.awt.Color;
-
+import java.awt.*;
 import javax.swing.*;
 
 public class Calculator {
 	
 	JFrame jf;
 	JLabel displayLabel;
+	JButton sevenButton;
 	
 	public Calculator() {
 		
@@ -20,7 +20,15 @@ public class Calculator {
 		displayLabel.setOpaque(true);
 		displayLabel.setHorizontalAlignment(SwingConstants.RIGHT);
 		displayLabel.setForeground(Color.black);
+		
 		jf.add(displayLabel);
+		
+		
+		sevenButton = new JButton("7");
+		sevenButton.setBounds(20, 150, 70, 70);
+		
+		jf.add(sevenButton);
+		
 		
 		jf.setVisible(true);
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
