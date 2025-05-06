@@ -8,6 +8,8 @@ public class Calculator {
 	JButton sevenButton,eightButton,nineButton;
 	JButton fourButton,fiveButton,sixButton;
 	JButton oneButton,twoButton,threeButton;
+	JButton dotButton,zeroButton,equalButton;
+	
 	public Calculator() {
 		
 		jf = new JFrame("Calculator");
@@ -69,6 +71,21 @@ public class Calculator {
 		threeButton.setBounds(220, 350, 70, 70);
 		
 		jf.add(threeButton);
+		
+		dotButton = new JButton(".");
+		dotButton.setBounds(20, 450, 70, 70);
+		
+		jf.add(dotButton);
+		
+		zeroButton = new JButton("0");
+		zeroButton.setBounds(120, 450, 70, 70);
+		
+		jf.add(zeroButton);
+		
+		equalButton = new JButton("=");
+		equalButton.setBounds(220, 450, 70, 70);
+		
+		jf.add(equalButton);
 		
 		jf.setVisible(true);
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
