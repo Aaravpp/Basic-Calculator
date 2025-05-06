@@ -169,37 +169,37 @@ public class Calculator implements ActionListener{
 		// TODO Auto-generated method stub
 		
 		if(e.getSource() == sevenButton) {
-			displayLabel.setText("7");
+			displayLabel.setText(displayLabel.getText()+"7");
 		}
 		else if(e.getSource() == eightButton) {
-			displayLabel.setText("8");
+			displayLabel.setText(displayLabel.getText()+"8");
 		}
 		else if(e.getSource() == nineButton) {
-			displayLabel.setText("9");
+			displayLabel.setText(displayLabel.getText()+"9");
 		}
 		else if(e.getSource() == fourButton) {
-			displayLabel.setText("4");
+			displayLabel.setText(displayLabel.getText()+"4");
 		}
 		else if(e.getSource() == fiveButton) {
-			displayLabel.setText("5");
+			displayLabel.setText(displayLabel.getText()+"5");
 		}
 		else if(e.getSource() == sixButton) {
-			displayLabel.setText("6");
+			displayLabel.setText(displayLabel.getText()+"6");
 		}
 		else if(e.getSource() == oneButton) {
-			displayLabel.setText("1");
+			displayLabel.setText(displayLabel.getText()+"1");
 		}
 		else if(e.getSource() == twoButton) {
-			displayLabel.setText("2");
+			displayLabel.setText(displayLabel.getText()+"2");
 		}
 		else if(e.getSource() == threeButton) {
-			displayLabel.setText("3");
+			displayLabel.setText(displayLabel.getText()+"3");
 		}
 		else if(e.getSource() == dotButton) {
-			displayLabel.setText(".");
+			displayLabel.setText(displayLabel.getText()+".");
 		}
 		else if(e.getSource() == zeroButton) {
-			displayLabel.setText("0");
+			displayLabel.setText(displayLabel.getText()+"0");
 		}
 		else if(e.getSource() == equalButton) {
 		}
