@@ -5,7 +5,7 @@ public class Calculator {
 	
 	JFrame jf;
 	JLabel displayLabel;
-	JButton sevenButton,eightButton;
+	JButton sevenButton,eightButton,nineButton;
 	
 	public Calculator() {
 		
@@ -33,6 +33,11 @@ public class Calculator {
 		eightButton.setBounds(120, 150, 70, 70);
 		
 		jf.add(eightButton);
+		
+		nineButton = new JButton("9");
+		nineButton.setBounds(220, 150, 70, 70);
+		
+		jf.add(nineButton);
 		
 		jf.setVisible(true);
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
