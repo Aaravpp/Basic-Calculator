@@ -14,7 +14,7 @@ public class Calculator {
 		
 		jf = new JFrame("Calculator");
 		jf.setLayout(null);
-		jf.setSize(500, 550);
+		jf.setSize(500, 580);
 		jf.setLocation(520, 100);
 		
 		displayLabel = new JLabel();
@@ -43,47 +43,47 @@ public class Calculator {
 		jf.add(nineButton);
 		
 		fourButton = new JButton("4");
-		fourButton.setBounds(20, 250, 70, 70);
+		fourButton.setBounds(20, 245, 70, 70);
 		
 		jf.add(fourButton);
 		
 		fiveButton = new JButton("5");
-		fiveButton.setBounds(120, 250, 70, 70);
+		fiveButton.setBounds(120, 245, 70, 70);
 		
 		jf.add(fiveButton);
 		
 		sixButton = new JButton("6");
-		sixButton.setBounds(220, 250, 70, 70);
+		sixButton.setBounds(220, 245, 70, 70);
 		
 		jf.add(sixButton);
 		
 		oneButton = new JButton("1");
-		oneButton.setBounds(20, 350, 70, 70);
+		oneButton.setBounds(20, 345, 70, 70);
 		
 		jf.add(oneButton);
 		
 		twoButton = new JButton("2");
-		twoButton.setBounds(120, 350, 70, 70);
+		twoButton.setBounds(120, 345, 70, 70);
 		
 		jf.add(twoButton);
 		
 		threeButton = new JButton("3");
-		threeButton.setBounds(220, 350, 70, 70);
+		threeButton.setBounds(220, 345, 70, 70);
 		
 		jf.add(threeButton);
 		
 		dotButton = new JButton(".");
-		dotButton.setBounds(20, 450, 70, 70);
+		dotButton.setBounds(20, 445, 70, 70);
 		
 		jf.add(dotButton);
 		
 		zeroButton = new JButton("0");
-		zeroButton.setBounds(120, 450, 70, 70);
+		zeroButton.setBounds(120, 445, 70, 70);
 		
 		jf.add(zeroButton);
 		
 		equalButton = new JButton("=");
-		equalButton.setBounds(220, 450, 70, 70);
+		equalButton.setBounds(220, 445, 70, 70);
 		
 		jf.add(equalButton);
 		
