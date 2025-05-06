@@ -12,7 +12,7 @@ public class Calculator implements ActionListener{
 	JButton fourButton,fiveButton,sixButton;
 	JButton oneButton,twoButton,threeButton;
 	JButton dotButton,zeroButton,equalButton;
-	JButton divButton,mulButton,minusButton,plusButton;
+	JButton divButton,mulButton,minusButton,plusButton,clearButton;
 	
 	public Calculator() {
 		
@@ -153,6 +153,14 @@ public class Calculator implements ActionListener{
 		
 		jf.add(plusButton);
 		
+		clearButton = new JButton("AC");
+		clearButton.setBounds(420, 445, 70, 70);
+		clearButton.addActionListener(this);
+		clearButton.setFont(new Font("Arial", Font.BOLD, 25));
+
+		
+		jf.add(clearButton);
+		
 		jf.setVisible(true);
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	
@@ -210,6 +218,9 @@ public class Calculator implements ActionListener{
 		else if(e.getSource() == minusButton) {
 		}
 		else if(e.getSource() == plusButton) {
+		}
+		else if(e.getSource() == clearButton) {
+			displayLabel.setText("");
 		}
 		
 	}
