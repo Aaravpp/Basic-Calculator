@@ -15,7 +15,9 @@ public class Calculator implements ActionListener{
 	JButton oneButton,twoButton,threeButton;
 	JButton dotButton,zeroButton,equalButton;
 	JButton divButton,mulButton,minusButton,plusButton,clearButton,delButton;
-	
+	JButton negButton;
+
+	String currentText;
 	String oldValue;
 	String newValue;
 	float oldValueF;
@@ -184,7 +186,14 @@ public class Calculator implements ActionListener{
 		
 		jf.add(delButton);
 		
+		negButton = new JButton("+/-");
+		negButton.setBounds(400, 245, 70, 70);
+		negButton.addActionListener(this);
+		negButton.setFont(new Font("Arial", Font.BOLD, 20));
 		
+		
+		jf.add(negButton);
+
 		
 		jf.setVisible(true);
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -375,7 +384,7 @@ public class Calculator implements ActionListener{
 			displayLabel.setText("");
 		}
 		else if(e.getSource() == delButton) {
-		    String currentText = displayLabel.getText();       // Get current text from display
+		    currentText = displayLabel.getText();       // Get current text from display
 		    if (!currentText.isEmpty()) {                      // Check if it's not empty
 		        displayLabel.setText(currentText.substring(0, currentText.length() - 1));      // Set display to:   Remove last character
 		        
@@ -386,6 +395,18 @@ public class Calculator implements ActionListener{
 				The last character "3" is removed.*/
 		    }
 		}
+		else if(e.getSource() == negButton) {
+		    
+			currentText = displayLabel.getText();
+		    if (!currentText.isEmpty()) {
+		        if (currentText.startsWith("-")) {
+		            displayLabel.setText(currentText.substring(1)); // remove '-'
+		        } else {
+		            displayLabel.setText("-" + currentText); // add '-'
+		        }
+		    }
+		}
+
 		
 	}
 
