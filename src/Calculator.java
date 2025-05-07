@@ -14,7 +14,7 @@ public class Calculator implements ActionListener{
 	JButton fourButton,fiveButton,sixButton;
 	JButton oneButton,twoButton,threeButton;
 	JButton dotButton,zeroButton,equalButton;
-	JButton divButton,mulButton,minusButton,plusButton,clearButton;
+	JButton divButton,mulButton,minusButton,plusButton,clearButton,delButton;
 	
 	String oldValue;
 	String newValue;
@@ -22,6 +22,7 @@ public class Calculator implements ActionListener{
 	float newValueF;
 	float result;
 	char operator;
+	int i;
 	
 	public Calculator() {
 		
@@ -174,6 +175,16 @@ public class Calculator implements ActionListener{
 
 		
 		jf.add(clearButton);
+		
+		delButton = new JButton("←");
+		delButton.setBounds(400, 345, 70, 70);
+		delButton.addActionListener(this);
+		delButton.setFont(new Font("Arial", Font.BOLD, 25));
+
+		
+		jf.add(delButton);
+		
+		
 		
 		jf.setVisible(true);
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -362,6 +373,18 @@ public class Calculator implements ActionListener{
 		}
 		else if(e.getSource() == clearButton) {
 			displayLabel.setText("");
+		}
+		else if(e.getSource() == delButton) {
+		    String currentText = displayLabel.getText();       // Get current text from display
+		    if (!currentText.isEmpty()) {                      // Check if it's not empty
+		        displayLabel.setText(currentText.substring(0, currentText.length() - 1));      // Set display to:   Remove last character
+		        
+		        /*substring(0, currentText.length() - 1) takes a part of the string from the beginning up to (but not including) the last character.
+
+				Example:
+				If currentText = "123", then substring(0, 2) gives "12".
+				The last character "3" is removed.*/
+		    }
 		}
 		
 	}
